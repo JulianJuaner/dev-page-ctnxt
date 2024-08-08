@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ControlNeXt Gallery</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2 class="sidebar-title">ControlNeXt</h2>
+        
+            <ul>
+                <li><a href="#paper-info" class="nav-link"><i class="fas fa-file-alt"></i> Paper Information</a></li>
+                <li><a href="#text-guided" class="nav-link"><i class="fas fa-paint-brush"></i> Text-to-Image </a></li>
+                <li><a href="#controlnet" class="nav-link"><i class="fas fa-image"></i> ControlNet</a></li>
+                <li><a href="#personalization" class="nav-link"><i class="fas fa-cat"></i> Personalization</a></li>
+                <li><a href="#contact-us" class="nav-link"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            </ul>
+        
+    </div>
+    <div class="content">
+        <div id="paper-info" class="paper-info">
+            <h1>ControlNeXt: Powerful and Efficient Control for Image and Video Generation</h1>
+            <div class="authors">
+                <p>
+                    <span class="author"><a href="pbihao.github.io github" target="_blank">Bohao Peng<sup>1</sup></a></span>, 
+                    <span class="author"><a href="https://civitai.com/user/Euge_" target="_blank">Jian Wang<sup>1</sup></a></span>, 
+                    <span class="author"><a href="https://julianjuaner.github.io/" target="_blank">Yuechen Zhang<sup>1</sup></a></span>, 
+                    <span class="author"><a href="https://fenglinglwb.github.io/" target="_blank">Wenbo Li<sup>1</sup></a></span>, 
+                    <span class="author"><a href="https://www.cse.cuhk.edu.hk/~mcyang/" target="_blank">Ming-Chang Yang<sup>1</sup></a></span>, 
+                    <span class="author"><a href="https://jiaya.me/" target="_blank">Jiaya Jia<sup># 1,2</sup></a></span>
+                </p>
+                <p>
+                    <span class="affiliation"><sup>1</sup> The Chinese University of Hong Kong</span>, 
+                    <span class="affiliation"><sup>2</sup> SmartMore</span>
+                </p>
+            </div>
+            <div class="links">
+                <p><a href="" target="_blank">Paper (Arxiv)</a></p>
+                <p><a href="https://github.com/dvlab-research/ControlNeXt" target="_blank">GitHub</a></p>
+            </div>
+            <p> # Corresponding author</p>
+           
+        
+        <section id="text-guided" class="gallery-section">
+            <h2>Overview </h2>
+            <p> TL;DR: This work proposes a light-weight controllable module for various base models (SD1.5, SDXL, SD3, SVD) and tasks (image / video generation with various conditions).</p>
+
+            <h5>Hover on the picture to see the overlayed condition!</h5>
+            <div class="gallery">
+                
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 2;  grid-column: span 2; grid-row: span 4;">
+                    <img src="eval_img/9/image - 2024-07-26T233201.913_3_conditioning.png" alt="Overlay image" class="overlay-image">
+                    <img src="eval_img/9/image - 2024-07-26T233201.913_0.png" alt=" " class="gallery-image">
+                    <div class="resolution">SDXL + Canny</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 2 ; grid-column: span 2; grid-row: span 4;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="examples/output-e77de85b.mp4" type="video/mp4">
+                    </video>
+                    <!-- <button class="play-pause-btn">▶</button> -->
+                    <div class="resolution-svd">SVD + Pose</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 2;  grid-column: span 2; grid-row: span 4;">
+                    <img src="examples/canny_1-5_cond.png" alt="Overlay image" class="overlay-image">
+                    <img src="examples/canny_1-5_gen.png" alt=" " class="gallery-image">
+                    <div class="resolution-1-5">SD1.5 + Canny</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 2;  grid-column: span 2; grid-row: span 4;">
+                    <img src="examples/depth_1-5_cond.png" alt="Overlay image" class="overlay-image">
+                    <img src="examples/depth_1-5_gen.png" alt=" " class="gallery-image">
+                    <div class="resolution-1-5">SD1.5 + Depth</div>
+                </div>
+                
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1;  grid-column: span 2; grid-row: span 4;">
+                    <img src="examples/sr_tiger_origin.png" alt="Overlay image" class="overlay-image-sr">
+                    <img src="examples/sr_tiger.png" alt=" " class="gallery-image-sr">
+                    <div class="resolution-sd3">SD3 + SR</div>
+                </div>
+
+            </div>
+            <div class="gallery">
+                
+
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 1;  grid-column: span 4; grid-row: span 2;">
+                    <img src="examples/canny_hat_cond.png" alt="Overlay image" class="overlay-image">
+                    <img src="examples/canny_hat_gen.png" alt=" " class="gallery-image">
+                    <div class="resolution">SDXL + Canny</div>
+                      
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 2 ; grid-column: span 2; grid-row: span 4;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="examples/output-e77de85b.mp4" type="video/mp4">
+                    </video>
+                    <!-- <button class="play-pause-btn">▶</button> -->
+                    <div class="resolution-svd">SVD + Pose</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 2 ; grid-column: span 2; grid-row: span 4;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="examples/output-10713863.mp4" type="video/mp4">
+                    </video>
+                    <!-- <button class="play-pause-btn">▶</button> -->
+                    <div class="resolution-svd">SVD + Pose</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 1;  grid-column: span 4; grid-row: span 2;">
+                    <img src="examples/canny_house_cond.png" alt="Overlay image" class="overlay-image">
+                    <img src="examples/canny_house_gen.png" alt=" " class="gallery-image">
+                    <div class="resolution">SDXL + Canny</div>
+                      
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 3;  grid-column: span 2; grid-row: span 3;">
+                    <img src="examples/pose_1-5_cond.png" alt="Overlay image" class="overlay-image">
+                    <img src="examples/pose_1-5_gen.png" alt=" " class="gallery-image">
+                    <div class="resolution-1-5">SD1.5 + Pose + LoRA</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 3;  grid-column: span 2; grid-row: span 3;">
+                    <img src="examples/pose_1-5_cond_2.png" alt="Overlay image" class="overlay-image">
+                    <img src="examples/pose_1-5_gen_2.png" alt=" " class="gallery-image">
+                    <div class="resolution-1-5">SD1.5 + Pose</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 3;  grid-column: span 2; grid-row: span 3;">
+                    <img src="examples/canny_1-5_cond.png" alt="Overlay image" class="overlay-image">
+                    <img src="examples/canny_1-5_gen.png" alt=" " class="gallery-image">
+                    <div class="resolution-1-5">SD1.5 + Canny</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 3;  grid-column: span 2; grid-row: span 3;">
+                    <img src="examples/mask_1-5_cond.png" alt="Overlay image" class="overlay-image">
+                    <img src="examples/mask_1-5_gen.png" alt=" " class="gallery-image">
+                    <div class="resolution-1-5">SD1.5 + Mask</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 3;  grid-column: span 2; grid-row: span 3;">
+                    <img src="examples/depth_1-5_cond.png" alt="Overlay image" class="overlay-image">
+                    <img src="examples/depth_1-5_gen.png" alt=" " class="gallery-image">
+                    <div class="resolution-1-5">SD1.5 + Depth</div>
+                </div>
+                
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1;  grid-column: span 2; grid-row: span 2;">
+                    <img src="examples/sr_cake_origin.png" alt="Overlay image" class="overlay-image-sr">
+                    <img src="examples/sr_cake_origin.png" alt=" " class="gallery-image">
+                    <div class="resolution-sd3">SD3 LowRes Input</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1;  grid-column: span 3; grid-row: span 3;">
+                    <img src="examples/sr_cake.png" alt="Overlay image" class="overlay-image-sr">
+                    <img src="examples/sr_cake.png" alt=" " class="gallery-image-sr">
+                    <div class="resolution-sd3">SD3 + SR</div>
+                </div>
+
+                
+
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1;  grid-column: span 2; grid-row: span 2;">
+                    <img src="examples/sr_tiger_origin.png" alt="Overlay image" class="overlay-image-sr">
+                    <img src="examples/sr_tiger_origin.png" alt=" " class="gallery-image">
+                    <div class="resolution-sd3">SD3 LowRes Input</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1;  grid-column: span 3; grid-row: span 3;">
+                    <img src="examples/sr_tiger.png" alt="Overlay image" class="overlay-image-sr">
+                    <img src="examples/sr_tiger.png" alt=" " class="gallery-image-sr">
+                    <div class="resolution-sd3">SD3 + SR</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 1;  grid-column: span 2; grid-row: span 1;">
+                    <img src="examples/sr_cake_zoom.png" alt="Overlay image" class="overlay-image-sr">
+                    <img src="examples/sr_cake_zoom.png" alt=" " class="gallery-image">
+                    <div class="resolution-sd3">Zoomed In</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 1;  grid-column: span 2; grid-row: span 1;">
+                    <img src="examples/sr_tiger_zoom.png" alt="Overlay image" class="overlay-image-sr">
+                    <img src="examples/sr_tiger_zoom.png" alt=" " class="gallery-image">
+                    <div class="resolution-sd3">Zoomed In</div>
+                </div>
+
+
+
+                
+        
+            </div> 
+            <div class="gallery">
+               
+                
+          
+            
+        </section>
+
+        <section id="personalization" class="gallery-section">
+            <h2>Personalization</h2>
+            <h3>User Input</h3>
+            <div class="gallery">
+                <div class="gallery-item" style="--aspect-ratio: 1 / 1; grid-column: span 3; grid-row: span 3;">
+                    <img src="personalized results/1_B0004902.jpg" alt="Image 8" class="gallery-image">
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 2 / 3; grid-column: span 2; grid-row: span 3;">
+                    <img src="personalized results/6_cat.jpg" alt="Image 9" class="gallery-image">
+                    
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 5 / 3; grid-column: span 5; grid-row: span 3;">
+                    <img src="personalized results/5_cat.jpg" alt="Image 9" class="gallery-image">
+                   
+                </div>
+            </div>
+            <h3>Personalized Results</h3>
+            
+            <div class="gallery">
+                <div class="gallery-item" style="--aspect-ratio: 1 / 1; grid-column: span 3; grid-row: span 3;">
+                    <img src="personalized results/ff00000.jpg" alt="Image 5" class="gallery-image">
+                    <div class="resolution">4096x4096</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 3 / 5; grid-column: span 3; grid-row: span 5;">
+                    <img src="personalized results/cc00003.jpg" alt="Image 5" class="gallery-image">
+                    <div class="resolution">3840x2160</div>
+                </div>
+                
+                <div class="gallery-item" style="--aspect-ratio: 2 / 1; grid-column: span 4; grid-row: span 2;">
+                    <img src="personalized results/00003.jpg" alt="Image 5" class="gallery-image">
+                    <div class="resolution">2048x4096</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 4 / 3; grid-column: span 4; grid-row: span 3;">
+                    <img src="personalized results/00000.jpg" alt="Image 5" class="gallery-image">
+                    <div class="resolution">3840x4096</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 1 / 1; grid-column: span 3; grid-row: span 3;">
+                    <img src="personalized results/00012.jpg" alt="Image 5" class="gallery-image">
+                    <div class="resolution">2048x2048</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 4 / 3; grid-column: span 4; grid-row: span 3;">
+                    <img src="personalized results/00098.jpg" alt="Image 5" class="gallery-image">
+                    <div class="resolution">3840x4096</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 1 / 1; grid-column: span 3; grid-row: span 3;">
+                    <img src="personalized results/fff00008.jpg" alt="Image 5" class="gallery-image">
+                    <div class="resolution">4096x4096</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 3 / 2; grid-column: span 3; grid-row: span 2;">
+                    <img src="personalized results/00005.jpg" alt="Image 5" class="gallery-image">
+                    <div class="resolution">2048x4096</div>
+                </div>
+                
+                
+                
+                
+            </div> 
+
+        </section>
+        <section id="contact-us" class="contact-us">
+            <h2>Contact Us</h2>
+            <p>
+                Feel free to contact Wenbo Li at fenglinglwb@gmail.com for cooperation, communication, or applying internships.
+            </p>
+        </section>
+        
+
+    </div>
+
+   <!-- Modal for image enlargement -->
+<!-- Modal for image enlargement -->
+    <!-- Modal for image enlargement -->
+<div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <div class="modal-content-container">
+        <div class="modal-content" id="modal-img"></div>
+    </div>
+    <div id="caption"></div>
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+      
+    <div id="resolution" class="resolution"></div>
+    <div class="thumbnails">
+        <!-- Thumbnails will be generated dynamically by JavaScript -->
+    </div>
+</div>
+
+    
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
