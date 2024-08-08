@@ -15,7 +15,7 @@
             <ul>
                 <li><a href="#paper-info" class="nav-link"><i class="fas fa-file-alt"></i> Paper Information</a></li>
                 <li><a href="#text-guided" class="nav-link"><i class="fas fa-paint-brush"></i> Overview </a></li>
-                <li><a href="#svd" class="nav-link"><i class="fas fa-image"></i> Video - SVD</a></li>
+                <li><a href="#svd" class="nav-link"><i class="fas fa-video"></i> Video - SVD</a></li>
                 <li><a href="#sdxl" class="nav-link"><i class="fas fa-image"></i> Image - SDXL</a></li>
                 <li><a href="#sd1-5" class="nav-link"><i class="fas fa-image"></i> Image - SD1.5</a></li>
                 <li><a href="#sd3" class="nav-link"><i class="fas fa-image"></i> Image-SR - SD3</a></li>
@@ -316,14 +316,85 @@
             <h2>Image Generation with 1.5</h2>
             <h3>We trained a multiple adapters on SD1.5 model.</h3>
             <div class="gallery">
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 3;  grid-column: span 2; grid-row: span 3;">
+                    <img src="examples/pose_1-5_cond.png" alt="Overlay image" class="overlay-image">
+                    <img src="examples/pose_1-5_gen.png" alt=" " class="gallery-image">
+                    <div class="resolution-1-5">SD1.5 + Pose + LoRA</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 3;  grid-column: span 2; grid-row: span 3;">
+                    <img src="examples/pose_1-5_cond_2.png" alt="Overlay image" class="overlay-image">
+                    <img src="examples/pose_1-5_gen_2.png" alt=" " class="gallery-image">
+                    <div class="resolution-1-5">SD1.5 + Pose</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 3;  grid-column: span 2; grid-row: span 3;">
+                    <img src="examples/canny_1-5_cond.png" alt="Overlay image" class="overlay-image">
+                    <img src="examples/canny_1-5_gen.png" alt=" " class="gallery-image">
+                    <div class="resolution-1-5">SD1.5 + Canny</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 3;  grid-column: span 2; grid-row: span 3;">
+                    <img src="examples/mask_1-5_cond.png" alt="Overlay image" class="overlay-image">
+                    <img src="examples/mask_1-5_gen.png" alt=" " class="gallery-image">
+                    <div class="resolution-1-5">SD1.5 + Mask</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 3;  grid-column: span 2; grid-row: span 3;">
+                    <img src="examples/depth_1-5_cond.png" alt="Overlay image" class="overlay-image">
+                    <img src="examples/depth_1-5_gen.png" alt=" " class="gallery-image">
+                    <div class="resolution-1-5">SD1.5 + Depth</div>
+                </div>
+
+            </div>
+            
+            <h3>Our method is also adaptable for community's LoRA weights</h3>
+            <div class="gallery">
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 3;  grid-column: span 2; grid-row: span 3;">
+                    <img src="examples/lora_cond.png" alt="Overlay image" class="overlay-image">
+                    <img src="examples/lora_cond.png" alt=" " class="gallery-image">
+                    <div class="resolution-1-5">Pose Condition</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 3;  grid-column: span 2; grid-row: span 3;">
+                    <img src="examples/lora_cond.png" alt="Overlay image" class="overlay-image">
+                    <img src="examples/lora_1.png" alt=" " class="gallery-image">
+                    <div class="resolution-1-5">SD1.5 + Warrior</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 3;  grid-column: span 2; grid-row: span 3;">
+                    <img src="examples/lora_cond.png" alt="Overlay image" class="overlay-image">
+                    <img src="examples/lora_2.png" alt=" " class="gallery-image">
+                    <div class="resolution-1-5">SD1.5 + Genshin</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 3;  grid-column: span 2; grid-row: span 3;">
+                    <img src="examples/lora_cond.png" alt="Overlay image" class="overlay-image">
+                    <img src="examples/lora_3.png" alt=" " class="gallery-image">
+                    <div class="resolution-1-5">SD1.5 + Chinese Painting
+                    </div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 2 / 3;  grid-column: span 2; grid-row: span 3;">
+                    <img src="examples/lora_cond.png" alt="Overlay image" class="overlay-image">
+                    <img src="examples/lora_4.png" alt=" " class="gallery-image">
+                    <div class="resolution-1-5">SD1.5 + Animation</div>
+                </div>
+
             </div>
         </section>
 
+        <section id="sd3" class="gallery-section">
+            <h2>Image Super-Resolution with SD3</h2>
+            <h3>We trained a Super-Resolution ControlNeXt on SD3 with degraded inputs.</h3>
+            <div class="gallery">
+            </div>
+        </section>
 
         <section id="contact-us" class="contact-us">
             <h2>Contact Us</h2>
             <p>
-                Feel free to contact Wenbo Li at fenglinglwb@gmail.com for cooperation, communication, or applying internships.
+                Feel free to contact Bohao Peng at <a href="mailto:bhpeng22@cse.cuhk.edu.hk" target="_blank">bhpeng22@cse.cuhk.edu.hk</a> for any question，cooperation, and communication.
             </p>
         </section>
         
